@@ -23,8 +23,8 @@ const produtos = [
 
 function exibirProdutos(produtosFiltrados) {
     const erro = document.getElementById("erro");
-    erro.textContent = ""; // limpa mensagens anteriores
-    listaProdutos.innerHTML = ""; // limpa lista antes de exibir
+    erro.textContent = "";
+    listaProdutos.innerHTML = ""; 
 
     if (produtosFiltrados.length === 0) {
         erro.textContent = "Nenhum produto encontrado.";
@@ -40,7 +40,16 @@ function exibirProdutos(produtosFiltrados) {
             <p>Preço: R$ ${p.preco}</p>
             <p>Categoria: ${p.categoria}</p>
             <p>Disponibilidade: ${p.disponibilidade ? "Sim" : "Não"}</p>
+            <br>
         `;
+        cardProduto.addEventListener("mouseover", function(){
+            cardProduto.style.transform = "scale(1.05)"
+            cardProduto.style.transition = "transfor 0.3s"
+        })
+        cardProduto.addEventListener("mouseout", function(){
+            cardProduto.style.transform = "scale(1)"
+            cardProduto.style.transition = "transfor 0.3s"
+        })
         listaProdutos.appendChild(cardProduto);
     }
     form.reset();
