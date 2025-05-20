@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Online</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        text-align: center;
+    }
+    form{
+        margin-top: 10px;
+    }
+    h1{
+        margin: 20px;
+    }
+</style>
+
 <body>
-    
+    <header>
+        <h1>Produtos Escolares</h1>
+    </header>
+
+   <section>
+    <form id="form">
+        <button id="btnListar" type="button">Listar Produtos</button>
+        <select id="selectCategorias">
+            <option value="caderno">Caderno</option>
+            <option value="caneta">Caneta</option>
+            <option value="grafite">Grafite</option>
+            <option value="borracha">Borracha</option>
+        </select>
+        <label class="checkbox-label">
+             <input id="chkDisponiveis" type="checkbox">Somente disponíveis
+        </label>
+        <button id="btnFiltrar" type="button">Filtrar</button>
+        <button id="btnLimpar" type="button">Limpar</button>
+    </form>
+</section>
+
+<br><br>
+
+<section>
+  <div id="listaProdutos"></div>
+  <p id="erro"></p>
+</section>
+
 </body>
 <script src="/js/app.js"></script>
 </html>
