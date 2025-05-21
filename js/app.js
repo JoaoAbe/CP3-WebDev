@@ -23,7 +23,7 @@ const produtos = [
 
 function exibirProdutos(produtosFiltrados) {
     const erro = document.getElementById("erro");
-    erro.textContent = "";
+    erro.textContent = ""; 
     listaProdutos.innerHTML = ""; 
 
     if (produtosFiltrados.length === 0) {
@@ -44,11 +44,11 @@ function exibirProdutos(produtosFiltrados) {
         `;
         cardProduto.addEventListener("mouseover", function(){
             cardProduto.style.transform = "scale(1.05)"
-            cardProduto.style.transition = "transfor 0.3s"
+            cardProduto.style.transition = "transform 0.3s"
         })
         cardProduto.addEventListener("mouseout", function(){
             cardProduto.style.transform = "scale(1)"
-            cardProduto.style.transition = "transfor 0.3s"
+            cardProduto.style.transition = "transform 0.3s"
         })
         listaProdutos.appendChild(cardProduto);
     }
